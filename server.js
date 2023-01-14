@@ -13,11 +13,10 @@ io.on('connection', (socket) => {
   console.log('connection', socket.id)
 
   socket.on('colorit', (data) => {
-    io.emit('colorit', data)
+    io.emit('colorit',data)//io is the input output layer where everybody else is connected
   })
   
 })
-
 
 server.listen(4646, () => {
   console.log('server started on http://localhost:4646')
